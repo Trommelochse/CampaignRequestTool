@@ -1,0 +1,321 @@
+@font-face{
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.ttf');
+	font-weight: normal;
+}
+
+@font-face{
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.ttf');
+	font-weight: bold;
+}
+
+@font-face{
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Italic.ttf');
+	font-style: italic;
+}
+
+@font-face{
+	font-family: 'NordicBet-Prematch';
+	src: url('../fonts/NordicBet-Prematch.ttf');
+
+}
+
+
+
+body,h1, h2, h3, h4, h5, h6 {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+p {
+	white-space: pre-wrap;
+}
+
+span.label {
+	text-transform: capitalize;
+}
+
+.row.comment {
+	margin-bottom: 12px;
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+	background: #fafafa;
+}
+
+.row.comments {
+}
+
+.logo:before{
+	font-family: 'NordicBet-Prematch';
+	content:"\e92c";
+	color: #fff;
+	font-size: 1.3em;
+	vertical-align: middle;
+	margin: 0 1em 0 0;
+	position: relative;
+	top: -2px;
+	
+}
+
+.wrapper{
+  width: 1120px;
+  max-width: 100%;
+  margin: auto;
+}
+
+
+.header-color{
+	background: #006eb4;
+	color: #fff;
+	vertical-align: middle;
+
+}
+
+.top-bar-title .close-button a{
+	color: #fff;
+	font-size: 1.5em;
+}
+
+.borderFieldset{
+	border: 0px solid #ddd;
+	padding: 1.25em;
+	margin: 1.25em;
+
+
+}
+
+div.hiddenField{
+	display:none;
+}
+
+div.showHiddenField{
+	display: block;
+}
+
+hr.thick {
+	border-bottom: 2px ridge #999;
+}
+
+
+
+.step-active,.step-inactive, .step-complete{
+	font-size: .8em;
+	padding: .5em 1em;
+	margin: 0 0 2em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 3px;
+	
+}
+
+.step-active{
+	border: 2px solid #006eb4;
+	background: #006eb4;
+}
+
+.step-inactive{
+	border: 2px solid #d4d4dd;
+	color: #d4d4dd;
+	transition: all .075s;
+}
+
+.step-link:hover .step-inactive {
+	border-color: #9B9BAF;
+	color: #006EB4;
+}
+
+.step-link > .step-inactive {
+	color: #FF8C10;
+}
+
+.step-complete{
+	border: 2px solid #006eb4;
+	color: #006eb4;
+
+}
+
+.nextButton, .saveButton, .editButton, .reviewButton, .approveButton, .rejectButton{
+	margin: 0 .5em 1em;
+	border-radius: 4px;
+	
+}
+
+.nextButton, .reviewButton{
+	padding-left: 2em;
+	padding-right: 2em;
+
+}
+
+.newRequest{
+	background: #e4e4e4;
+}
+
+.newRequestButton{
+	padding: 1.1em;
+	background: #f07d00;
+	border-radius: 4px;
+	margin: 1em 0em;
+	transition: none;
+}
+
+.newRequestButton:hover{
+	background: #ff8c0f;
+	transition: none;
+}
+
+.requestListFilters{
+	margin-bottom: 2em;
+	background: #eee;
+	padding: 1em 0;
+}
+
+.filterTitle{
+	vertical-align: middle;
+	padding: .5em;
+}
+
+.filterBy{
+	padding: .5em;
+	border-radius: 100em;
+	text-align: center;
+}
+
+.filterByOff{
+	background: #ccc !important;
+	color: #eee !important;
+}
+
+
+
+.requestListHeader{
+	margin-bottom: 1em;
+}
+
+.requestListHeader div span{
+	font-size: 0.9em;
+	color: #666 !important;
+}
+
+.requestList{
+	border: 0;
+	border-top: 1px solid #eee;
+	margin-bottom: 0;
+}
+
+.requestList:nth-child(odd){
+	background: #fafafa;
+}
+
+.requestList:last-child{
+	border-bottom: 1px solid #eee;
+}
+
+.campaignListName{
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	font-weight: bold;
+}
+
+.campaignListDate{
+	font-size: 0.8em;
+	vertical-align: middle;
+	
+}
+
+.campaignListItemLabel{
+	color: #999;
+	font-size: 0.8em;
+	vertical-align: middle;
+	margin: 0 1em 0 0;
+}
+
+.reviewSectionButtons{
+	display: none;
+}
+
+.reviewApproved{
+	color: #3D9319;
+}
+
+.reviewRejected{
+	color: #DF8787;
+}
+
+/* CALENDAR */
+
+.fc-event.a {
+	background-color: #22BB5B!important;
+	border-color: #888;
+	color: #222;
+}
+
+.fc-event.p {
+	background-color: #ffae00!important;
+	border-color: #888;
+	color:#222;
+}
+
+.fc-event.r {
+	background-color: #CC4B37!important;
+	border-color: #888;
+}
+
+.button.info {
+	background-color: #a0d3e8;
+    border-color: #61b6d9;
+    color: #333333;
+}
+
+.button.info:hover {
+	background-color: #61b6d9;
+}
+
+.modal-overlay {
+	position: fixed;
+	top:0;
+	right:0;
+	bottom: 0;
+	left:0;
+	background: rgba(0,20,28,.4);
+
+}
+.modal.container {
+	max-width: 400px;
+	padding: 10px 20px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #fff;
+	box-shadow: -10px 12px 10px rgba(0,0,0,0.15);
+}
+
+
+/* Labels */
+.label {
+	border-radius: 2px;
+	line-height: 1.2;
+}
+
+.label.draft {
+	background: #767676;
+	color: #fefefe;
+}
+
+.label.pending {
+	background: #ffae00;
+	color: #0a0a0a;
+}
+
+.label.approved {
+	background: #43d064;
+	color: #0a0a0a;
+}
+
+/* Button */
+
+.button {
+	border-radius: 3px;
+}
