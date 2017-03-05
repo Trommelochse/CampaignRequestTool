@@ -10,9 +10,14 @@ use Session;
 
 class CampaignController extends Controller
 {
+    public function __construct() 
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        $campaigns = Campaign::paginate(5);
+        $campaigns = Campaign::paginate(10);
     	return view('campaigns.dashboard')->withCampaigns($campaigns);
     }
 

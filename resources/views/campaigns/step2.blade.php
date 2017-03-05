@@ -104,7 +104,7 @@
     <div class="row">
       <hr>
       <div class="mediun-3 small-6 columns float-left">
-        <button class="button primary float-left nextButton">Previous</button>
+        <a class="button primary float-left nextButton" href="{{route('editCampaign', $campaign->id)}}">Previous</a>
       </div>
       <div class="medium-3 small-6 columns float-right">
         <button type="submit" class="submit button nextButton float-right">Next</button>

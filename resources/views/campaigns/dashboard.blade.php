@@ -22,8 +22,10 @@
 <div class="expanded row requestListHeader show-for-large">
     <div class="large-1 columns text-center"> <span>Status</span> </div>
     <div class="large-4 columns text-left"> <span> Campaign Name</span> </div>
-    <div class="large-2 columns text-left"> <span> Start Date</span> </div>
-    <div class="large-2 columns text-left"> <span> End Date</span> </div>
+    <div class="large-1 columns text-left"> <span> Start Date</span> </div>
+    <div class="large-1 columns text-left"> <span> End Date</span> </div>
+    <div class="large-2 columns text-left"> <span> Created</span> </div>
+    <div class="large-1 small-4 columns"> </div>
     <div class="large-1 small-4 columns"> </div>
     <div class="large-1 small-4 columns"> </div>
     <div class="large-1 small-4 columns"> </div>
@@ -37,13 +39,18 @@
         <div class="large-1 columns"> <span class=" label {{ $campaign->state }}">{{ $campaign->state }}</span> </div>
         <div class="row show-for-small-only">&nbsp</div>
         <div class="large-4 columns"> <span class="campaignListName">{{$campaign->title}}</span> </div>
-        <div class="large-2 columns"> <span class="campaignListItemLabel show-for-small-only">Start Date:</span><span class="campaignListDate"> {{$campaign->startDate}}</span> </div>
-        <div class="large-2 columns"> <span class="campaignListItemLabel show-for-small-only">End Date:</span><span class="campaignListDate">
+        <div class="large-1 columns"> <span class="campaignListItemLabel show-for-small-only"></span><span class="campaignListDate"> {{$campaign->startDate}}</span> </div>
+        <div class="large-1 columns"> <span class="campaignListItemLabel show-for-small-only"></span><span class="campaignListDate">
+        {{ $campaign->endDate}}</span> </div>
+        <div class="large-2 columns"> <span class="campaignListItemLabel show-for-small-only"></span><span class="campaignListDate">
         {{ $campaign->endDate}}</span> </div>
         <div class="row show-for-small-only">&nbsp</div>
         <div class="large-1 small-4 columns"> <a class="float-center text-center" href="{{route('showCampaign', $campaign->id)}}">View</a> </div>
+        @if ($campaign->user_id)
         <div class="large-1 small-4 columns"> <a class="float-center text-center" href="{{route('editCampaign', $campaign->id)}}">Edit</a> </div>
-        <div class="large-1 small-4 columns"> <a class="float-center text-center" href="#">Delete</a> </div>
+        @else
+        <div class="large-1 small-4 columns">&nbsp;</div>
+        @endif
     </div>
 </div>
 

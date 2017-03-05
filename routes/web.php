@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+// Creatives
 Route::post('campaigns/{id}/creative/update', [
 		'uses' => 'CampaignController@updateCreative',
 		'as' => 'updateCreative'
@@ -29,7 +32,7 @@ Route::get('campaigns/{id}/creative', [
 	'as' => 'createCreative'
 	]);
 
-/////////////////// Localisation
+// Localisation
 Route::post('campaigns/{id}/localisation/update', [
 		'uses' => 'CampaignController@updateLocalisation',
 		'as' => 'updateLocalisation'
@@ -49,7 +52,7 @@ Route::get('campaigns/{id}/localisation', [
 	'as' => 'createLocalisation'
 	]);
 
-///////////////////////// Campaign
+// Campaign
 Route::post('campaigns/{id}/update', [
 		'uses' => 'CampaignController@updateCampaign',
 		'as' => 'updateCampaign'
@@ -83,4 +86,13 @@ Route::get('/', [
 	'uses' => 'CampaignController@index',
 	'as' => 'index'
 ]);
-//Route::resource('campaigns', 'CampaignController');
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

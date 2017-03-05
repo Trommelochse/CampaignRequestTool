@@ -10,4 +10,9 @@ class Campaign extends Model
     {
     	return $this->hasMany('App\Comment');
     }
+
+    public function creator()
+    {
+    	return $this->hasOne('App\User');
+    }
 }
