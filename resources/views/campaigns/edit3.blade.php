@@ -89,7 +89,7 @@
                 </div>
                 <div class="large-9 columns hiddenField">
                     <label for="channelSMSBrief">SMS Brief</label>
-                    <textarea rows="3" id="channelSMSBrief" name="smsBody" data-abide-ignore>{{ $campaign->sms}}</textarea>
+                    <textarea rows="3" id="channelSMSBrief" name="smsBody" data-abide-ignore>{{ $campaign->smsBody}}</textarea>
                     <p class="help-text" id="channelSMSBriefHelpText">If you have any special request please enter them here. If this field is left empty, the decisions will rest on the execution team.</p>
                 </div>
             </div>
@@ -166,11 +166,10 @@
         <div class="row">
             <hr>
             <div class="mediun-3 small-6 columns float-left">
-                <button class="button primary float-left nextButton">Previous</button>
+                <a class="button primary float-left nextButton" href="{{route('editLocalisation', $campaign->id)}}">Previous</a>
             </div>
             <div class="medium-5 small-6 columns float-right">
                 <button class="submit button success nextButton float-right">Submit for Approval</button>
-                <button class="button hollow primary float-right saveButton">Save Draft</button>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
             </div>
         </div>

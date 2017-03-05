@@ -10,9 +10,14 @@ use Session;
 
 class CampaignController extends Controller
 {
+    public function __construct() 
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        $campaigns = Campaign::all();
+        $campaigns = Campaign::paginate(10);
     	return view('campaigns.dashboard')->withCampaigns($campaigns);
     }
 
@@ -201,7 +206,7 @@ class CampaignController extends Controller
         $campaign->dm = $request->dm;
         $campaign->tvc = $request->tvc;  
 
-        $campaign->state = 'Pending';
+        $campaign->state = 'pending';
 
         $campaign->save();
 
@@ -219,32 +224,32 @@ class CampaignController extends Controller
 
         $campaign = Campaign::find($id);
 
-        $campaign->creativeBody = $request->creativeBody;
-        $campaign->onsite = $request->onsite;
-        $campaign->lp = $request->lp;
-        $campaign->nl = $request->nl;
-        $campaign->oms = $request->oms;
-        $campaign->sms = $request->sms;
-        $campaign->push = $request->push;
-        $campaign->blog = $request->blog;
-        $campaign->some = $request->some;
-        $campaign->onsiteBody = $request->onsiteBody;
-        $campaign->lpBody = $request->lpBody;
-        $campaign->lpUrl = $request->lpUrl;
-        $campaign->lpSimilar = $request->lpSimilar;
-        $campaign->nlBody = $request->nlBody;
-        $campaign->omsBody = $request->omsBody;
-        $campaign->smsBody = $request->smsBody;
-        $campaign->pushBody = $request->pushBody;
-        $campaign->blogBody = $request->blogBody;
-        $campaign->blogCategory = $request->blogCategory;
-        $campaign->someBody = $request->someBody;
-        $campaign->aff = $request->aff;
-        $campaign->extba = $request->extba;
-        $campaign->lbm = $request->lbm;
-        $campaign->print = $request->print;
-        $campaign->dm = $request->dm;
-        $campaign->tvc = $request->tvc;  
+        $campaign->creativeBody = $request->input('creativeBody');
+        $campaign->onsite = $request->input('onsite');
+        $campaign->lp = $request->input('lp');
+        $campaign->nl = $request->input('nl');
+        $campaign->oms = $request->input('oms');
+        $campaign->sms = $request->input('sms');
+        $campaign->push = $request->input('push');
+        $campaign->blog = $request->input('blog');
+        $campaign->some = $request->input('some');
+        $campaign->onsiteBody = $request->input('onsiteBody');
+        $campaign->lpBody = $request->input('lpBody');
+        $campaign->lpUrl = $request->input('lpUrl');
+        $campaign->lpSimilar = $request->input('lpSimilar');
+        $campaign->nlBody = $request->input('nlBody');
+        $campaign->omsBody = $request->input('omsBody');
+        $campaign->smsBody = $request->input('smsBody');
+        $campaign->pushBody = $request->input('pushBody');
+        $campaign->blogBody = $request->input('blogBody');
+        $campaign->blogCategory = $request->input('blogCategory');
+        $campaign->someBody = $request->input('someBody');
+        $campaign->aff = $request->input('aff');
+        $campaign->extba = $request->input('extba');
+        $campaign->lbm = $request->input('lbm');
+        $campaign->print = $request->input('print');
+        $campaign->dm = $request->input('dm');
+        $campaign->tvc = $request->input('tvc');
 
         $campaign->state = 'pending';
 

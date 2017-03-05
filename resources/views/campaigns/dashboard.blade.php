@@ -53,7 +53,6 @@
 
 
 <div class="medium-6 columns float-right">
-    <button class="button primary nextButton disabled float-right">Next Page</button>
-    <button class="button primary nextButton disabled float-right">Previous Page</button>
+    {!! $campaigns->links(); !!}
 </div>
 @stop

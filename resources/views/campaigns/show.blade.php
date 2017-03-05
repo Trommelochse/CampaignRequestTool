@@ -3,7 +3,10 @@
 @section('title' , 'View Campaign Request')
 
 @section('content')
-
+<!-- Fixed Status symbol -->
+<div class="row status-fixed">
+  
+</div>
 
 <div class="wrapper">
   <div class="borderFieldset">

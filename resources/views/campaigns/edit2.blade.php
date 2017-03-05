@@ -44,7 +44,7 @@
             </div>
             <div class="large-9 columns hiddenField ">
               <label for="logoTextDK">DK Logo Text Translation</label>
-              <input name="dkBody" type="text">
+              <input name="dkBody" type="text" value="{{$campaign->dkBody}}">
               <span class="form-error">Please enter the text for the DK version of the logo.</span> </div>
           </div>
           <div class="row">
@@ -54,7 +54,7 @@
             </div>
             <div class="large-9 columns hiddenField">
               <label for="logoTextSE">SE Logo Text Translation</label>
-              <input name="svBody" type="text">
+              <input name="svBody" type="text" value="{{$campaign->svBody}}">
               <span class="form-error">Please enter the text for the SE version of the logo.</span> </div>
           </div>
           <div class="row">
@@ -64,7 +64,7 @@
             </div>
             <div class="large-9 columns hiddenField">
               <label for="logoTextNO">NO Logo Text Translation</label>
-              <input name="noBody" type="text">
+              <input name="noBody" type="text" value="{{$campaign->noBody}}">
               <span class="form-error">Please enter the text for the NO version of the logo.</span> </div>
           </div>
           <div class="row">
@@ -74,7 +74,7 @@
             </div>
             <div class="large-9 columns hiddenField">
               <label for="logoTextFI">FI Logo Text Translation</label>
-              <input name="fiBody" type="text">
+              <input name="fiBody" type="text" value="{{$campaign->fiBody}}">
               <span class="form-error">Please enter the text for the FI version of the logo.</span> </div>
           </div>
           <div class="row">
@@ -84,7 +84,7 @@
             </div>
             <div class="large-9 columns hiddenField">
               <label for="logoTextDE">DE Logo Text Translation</label>
-              <input name="deBody" type="text">
+              <input name="deBody" type="text" value="{{$campaign->deBody}}">
               <span class="form-error">Please enter the text for the DE version of the logo.</span> </div>
           </div>
           <div class="row">
@@ -104,7 +104,7 @@
     <div class="row">
       <hr>
       <div class="mediun-3 small-6 columns float-left">
-        <button class="button primary float-left nextButton">Previous</button>
+        <a class="button primary float-left nextButton" href="{{route('editCampaign', $campaign->id)}}">Previous</a>
       </div>
       <div class="medium-3 small-6 columns float-right">
         <button type="submit" class="submit button nextButton float-right">Next</button>
