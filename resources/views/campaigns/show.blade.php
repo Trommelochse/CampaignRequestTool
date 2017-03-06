@@ -371,6 +371,7 @@
         <p>{{$campaign->tvc ? 'Yes' : 'No'}}</p>
       </div>
     </div>
+    @if(Auth::user()->type == 3)
     <form method="POST" action="#" >
       <div class="row">
         <div class="large-12 columns">
@@ -386,6 +387,7 @@
         </div>
       </div>
     </form>
+    @endif
   </div>
 </div>
 
